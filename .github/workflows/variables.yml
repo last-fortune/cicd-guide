@@ -4,9 +4,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      BRANCH: GITHUB_REF_NAME
+      BRANCH: hoge
     steps:
       - run: echo $BRANCH
+      - run: echo ${{ github.ref_name }}
       - uses: actions/checkout@v4
         with:
           ref: ${{ env.BRANCH }}
