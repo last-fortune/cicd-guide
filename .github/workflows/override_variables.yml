@@ -10,3 +10,4 @@ jobs:
       - env:
           EXAMPLE: override
         run: echo "${EXAMPLE}"
+      - run: echo "${GITHUB_ACTOR}"
