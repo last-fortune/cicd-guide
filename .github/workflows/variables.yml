@@ -4,7 +4,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      BRANCH: hoge
+      BRANCH: main
     steps:
       - run: echo "${BRANCH}"
       - run: echo ${{ github.ref_name }}
