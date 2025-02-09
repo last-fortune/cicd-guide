@@ -1,0 +1,12 @@
+name: Override environment variables
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      EXAMPLE: example
+    steps:
+      - run: echo "${EXAMPLE}"
+      - env:
+          EXAMPLE: override
+        run: echo "${EXAMPLE}"
