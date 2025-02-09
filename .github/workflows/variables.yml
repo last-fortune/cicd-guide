@@ -6,7 +6,7 @@ jobs:
     env:
       BRANCH: hoge
     steps:
-      - run: echo $BRANCH
+      - run: echo "${BRANCH}"
       - run: echo ${{ github.ref_name }}
       - uses: actions/checkout@v4
         with:
