@@ -1,0 +1,9 @@
+name: Condtions workflow
+on: push
+jobs:
+  skip-or-run:
+    if: ${{ github.actor == 'last-fortune' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
+      
